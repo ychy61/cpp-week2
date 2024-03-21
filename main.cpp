@@ -1,5 +1,3 @@
-#include <iostream>
-
 int util(); //유틸 함수
 
 int main(){
