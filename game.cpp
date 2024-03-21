@@ -1,5 +1,6 @@
 #include <iostream>
 
+int gameCount = 1;
 int ballCount;
 int strikeCount;
 
@@ -53,6 +54,10 @@ bool game(int answer, int guess){
             return true;
       } else {
             std::cout << "Strikes: "<<strikeCount<<", Balls: "<<ballCount<<std::endl;
+            if (gameCount == 5){
+                  std::cout << "You lose!";
+            }
+            gameCount += 1;
             return false;
       }
 };

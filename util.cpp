@@ -30,13 +30,20 @@ int util(){
       int answer = makeAnswer();
       // std::cout << "Answer is " << answer << std::endl;
 
+      int chance = 5; //시도 횟수
       int guess; // 추측할 수
       int success = false;
-      while(success != true){ // success 변수가 true가 아닐때까지 수행
+      while(chance > 0){
+            std::cout << chance <<" chances left." << std::endl;
             std::cout << "Enter a guess: ";
             std::cin >> guess; //추측할 수를 입력 받음
 
             success = game(answer, guess); // 게임 로직 함수 호출하고 반환되는 값을 success로 받음
+
+            if(success == true){
+                  break; // 성공했다면 break
+            }
+            chance -= 1; // 아니면 기회 차감
       }
 
       return 0;
