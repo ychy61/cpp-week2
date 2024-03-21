@@ -28,7 +28,7 @@ int makeAnswer(){
 
 int util(){
       int answer = makeAnswer();
-      std::cout << "Answer is " << answer << std::endl;
+      // std::cout << "Answer is " << answer << std::endl;
 
       int guess; // 추측할 수
       int success = false;
