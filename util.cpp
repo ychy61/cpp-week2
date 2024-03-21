@@ -18,6 +18,11 @@ int makeAnswer(){
 
       int answer = dis(gen);
 
+      //중복이 있다면 함수를 다시 호출
+      if (answer/100 == (answer%100)/10 | answer/100 == answer%10 | (answer%100)/10 == answer%10){
+            answer = makeAnswer();
+      }
+
       return answer;
 }
 
